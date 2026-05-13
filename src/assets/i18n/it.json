@@ -1,0 +1,244 @@
+{
+  "HEADER": {
+    "HOME": "Home",
+    "ABOUT": "Chi Siamo",
+    "SERVICES": "Servizi",
+    "QUOTE_AI": "Preventivo AI",
+    "QUOTES": "I miei Preventivi",
+    "CONTACT": "Contatti",
+    "LOGIN": "Accedi",
+    "ANNOUNCEMENTS": "Annunci",
+    "BOOK_NOW": "Prenota Ora",
+    "DROPDOWN": {
+      "RENTAL": "Autonoleggio",
+      "COMMERCIAL": "Veicoli Commerciali",
+      "LONG_TERM": "Lungo Termine",
+      "FLEET": "Parco Auto",
+      "USED_CARS": "Auto Usate",
+      "WASH": "Lavaggio Auto"
+    }
+  },
+  "SERVICES": {
+    "KICKER": "I NOSTRI SERVIZI",
+    "TITLE": "Soluzioni di Mobilità",
+    "SUBTITLE": "su misura per te",
+    "INTRO": "Scopri tutti i servizi offerti da La Dolce Vita SRL. Dalla vacanza spensierata alle esigenze di lavoro più complesse, abbiamo il veicolo perfetto per ogni tua necessità.",
+
+    "RENTAL": {
+      "TITLE": "Autonoleggio",
+      "DESC": "Vivi la Puglia in totale libertà. Auto moderne, sicure e dotate di ogni comfort per rendere il tuo viaggio indimenticabile, anche senza carta di credito.",
+      "MORE": "Scopri le tariffe"
+    },
+    "COMMERCIAL": {
+      "TITLE": "Veicoli Commerciali",
+      "DESC": "Furgoni e van spaziosi per il tuo business o per i tuoi traslochi. Massima affidabilità, capienza e resistenza al servizio del tuo lavoro quotidiano.",
+      "MORE": "Vedi i mezzi"
+    },
+    "LONG_TERM": {
+      "TITLE": "Noleggio Lungo Termine",
+      "DESC": "La comodità di un'auto sempre nuova senza i pensieri dell'acquisto. Manutenzione, bollo e assicurazione inclusi in un unico canone fisso mensile.",
+      "MORE": "Richiedi preventivo"
+    },
+    "FLEET": {
+      "TITLE": "Il Nostro Parco Auto",
+      "DESC": "Oltre 150 veicoli tra city car, eleganti berline, SUV spaziosi e cabriolet sportive. Una flotta in continuo aggiornamento per offrirti sempre il meglio.",
+      "MORE": "Esplora la flotta"
+    },
+    "USED_CARS": {
+      "TITLE": "Vendita Auto Usate",
+      "DESC": "Usato sicuro e garantito al 100%. Selezioniamo, tagliandiamo e revisioniamo rigorosamente ogni singolo veicolo prima di proporlo in vendita ai nostri clienti.",
+      "MORE": "Guarda gli annunci"
+    },
+    "WASH": {
+      "TITLE": "Lavaggio e Sanificazione",
+      "DESC": "Cura maniacale per i dettagli. Offriamo servizi di lavaggio manuale accurato, pulizia profonda della tappezzeria e sanificazione ad ozono per la tua vettura.",
+      "MORE": "Prenota lavaggio"
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Contatta",
+    "SUBTITLE": "BOCCONI SRL",
+    "INFO": "Informazioni",
+    "INFO_DESC": "Siamo a disposizione per assistenza, preventivi e informazioni sui nostri servizi.",
+    "NAME": "Nome e Cognome",
+    "NAME_PLACEHOLDER": "Il tuo nome e cognome",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "La tua email",
+    "PHONE": "Cellulare",
+    "PHONE_PLACEHOLDER": "Inserisci il tuo numero di cellulare",
+    "MESSAGE": "Messaggio",
+    "MESSAGE_PLACEHOLDER": "Scrivi qui la tua richiesta",
+    "SEND": "Invia Messaggio",
+    "SENDING": "Invio in corso...",
+    "SUCCESS": "Messaggio inviato con successo!",
+    "ERROR": "Errore durante l'invio. Riprova più tardi."
+  },
+  "HOME": {
+    "HERO": {
+      "TITLE": "HAI BISOGNO DI UN'AUTO O FURGONE?",
+      "SUBTITLE": "NOLEGGIAMI ANCHE SENZA CARTA DI CREDITO",
+      "DESC": "BOCCONI SRL opera a Massafra con esposizione veicoli e officina specializzata, offrendo soluzioni complete per privati e aziende.",
+      "CTA_SERVICES": "Scopri i servizi",
+      "CTA_CONTACT": "Richiedi informazioni",
+      "HIGHLIGHTS": {
+        "FAST": {
+          "TITLE": "Interventi rapidi",
+          "DESC": "Diagnosi e riparazioni per mezzi commerciali e industriali"
+        },
+        "FLEET": {
+          "TITLE": "Flotta noleggio",
+          "DESC": "Veicoli e attrezzature disponibili con formule flessibili"
+        },
+        "SUPPORT": {
+          "TITLE": "Supporto dedicato",
+          "DESC": "Consulenza tecnica e assistenza programmata"
+        }
+      },
+      "METRICS": {
+        "SUPPORT": "Supporto operativo",
+        "SERVICES": "Servizi specializzati",
+        "CUSTOMER": "Orientamento al cliente"
+      }
+    },
+    "FEATURES": {
+      "FAST": {
+        "TAG": "Officina",
+        "TITLE": "Due sedi operative",
+        "DESC": "Esposizione veicoli in Contrada Sandergio snc e officina in Via Chiatona 26, Massafra."
+      },
+      "CUTTING": {
+        "TAG": "Noleggio",
+        "TITLE": "Servizi completi",
+        "DESC": "Dalla meccanica alla carrozzeria, fino a revisioni, ricambi e allestimenti."
+      },
+      "SECURE": {
+        "TAG": "Affidabilità",
+        "TITLE": "Affidabilità professionale",
+        "DESC": "Assistenza qualificata per auto, furgoni, moto, caravan e veicoli industriali."
+      }
+    },
+    "STATS": {
+      "PROJECTS": "Progetti Completati",
+      "CLIENTS": "Clienti Felici",
+      "EXPERIENCE": "Anni di Esperienza",
+      "TEAM": "Esperti nel Team"
+    },
+    "TESTIMONIALS": {
+      "TITLE": "Cosa dicono i",
+      "SUBTITLE": "Nostri Clienti",
+      "1": {
+        "NAME": "Marco Rossi",
+        "ROLE": "CEO, TechStart",
+        "TEXT": "Un team eccezionale. Hanno trasformato la nostra idea in un'app di successo in tempi record."
+      },
+      "2": {
+        "NAME": "Laura Bianchi",
+        "ROLE": "Product Manager, E-Shop Pro",
+        "TEXT": "Professionalità e competenza tecnica incredibili. Consigliatissimi per progetti complessi."
+      },
+      "3": {
+        "NAME": "Giulia Verdi",
+        "ROLE": "Founder, GreenApp",
+        "TEXT": "Sanno ascoltare le esigenze del cliente e trovare sempre la soluzione tecnica migliore."
+      }
+    }
+  },
+  "ABOUT": {
+    "TITLE": "La Dolce Vita",
+    "SUBTITLE": "L'eccellenza del noleggio in Puglia",
+    "INTRO_P1": "Siamo un'azienda con sedi a <strong>Mottola</strong> e <strong>Grottaglie</strong> con oltre 10 anni di esperienza. Il nostro parco con <strong>oltre 150 veicoli</strong> ci rende leader nel sud Italia.",
+    "FEATURES_TITLE": "Perché Sceglierci",
+    "F1_TITLE": "Alta Qualità",
+    "F1_DESC": "Proponiamo solo veicoli in ottime condizioni a prezzi altamente competitivi.",
+    "F2_TITLE": "Trasparenza",
+    "F2_DESC": "Presentiamo sempre preventivi e contratti chiari, completi e senza sorprese.",
+    "F3_TITLE": "Personalizzazione",
+    "F3_DESC": "Servizio di noleggio flessibile, modellato sulle tue reali esigenze.",
+    "F4_TITLE": "Vasta Scelta e Comfort",
+    "F4_DESC": "Un'ampia flotta sempre controllata e sanificata per viaggi di piacere o lavoro."
+  },
+  "FOOTER": {
+    "RIGHTS": "Tutti i diritti riservati.",
+    "PRIVACY": "Privacy Policy",
+    "TERMS": "Terms of Service"
+  },
+  "SERVICE_DETAIL": {
+    "autonoleggio": {
+      "HERO_TITLE": "Noleggio Auto in Puglia",
+      "HERO_SUBTITLE": "Autonoleggio Senza Conducente",
+      "INTRO_TITLE": "Noleggio a Breve Termine",
+      "INTRO_TEXT": "La Dolce Vita è l'agenzia di autonoleggio di riferimento a Mottola e in provincia di Taranto, una società attenta e professionale in grado di rispondere a qualsiasi richiesta della clientela con la massima accuratezza. Disponendo di un ampio parco auto, la società riesce a venire incontro alle diverse esigenze proponendo mezzi adatti a singoli viaggiatori e famiglie, gruppi turistici e aziende, sempre garantendo i massimi standard qualitativi del servizio. Non mancano inoltre auto per noleggio a breve termine, dai modelli più classici alle auto sportive e di lusso, ideali per rendere ancora più indimenticabili i vostri momenti più importanti.",
+      "SPLIT_TITLE_BLACK": "Autonoleggio ",
+      "SPLIT_TITLE_RED": "Senza Conducente",
+      "SPLIT_TEXT": "Se desiderate noleggiare un automobile a breve termine o piuttosto, volete disporre di un veicolo esclusivo per una serata di gala o un addio al nubilato o al celibato, La Dolce Vita è l'operatore giusto a cui affidarvi. La ditta di autonoleggio di Mottola, in provincia di Taranto, vanta un ampio parco di auto di lusso, sportive e classiche, pronte a esaltare il vostro carattere e la vostra personalità durante le occasioni più importanti.\n\nPer conoscere l'intero parco di auto per eventi, non esitate a contattare il personale in sede e a richiedere un preventivo dettagliato, ritagliato su misura per voi. Nell'ambito del noleggio auto a breve termine, La Dolce Vita propone una vasta gamma di modelli sia classici, come le ammiraglie delle case automobilistiche più prestigiose, che sportive. In base allo stile del vostro evento e alla vostra personalità, potrete dunque scegliere la tipologia di veicolo più adatta e sorprendere così tutti mostrandovi a bordo di un veicolo unico ed esclusivo."
+    }
+  },
+  "QUOTE": {
+    "TITLE": "Simulatore",
+    "SUBTITLE": "Preventivo AI",
+    "INPUT_TITLE": "Descrivi il tuo progetto",
+    "INPUT_DESC": "Usa il linguaggio naturale. Più dettagli fornisci, più precisa sarà l'AI.",
+    "PLACEHOLDER": "Esempio: Vorrei un'app mobile per la gestione di una palestra con login utenti e pagamenti...",
+    "GENERATE": "Genera Preventivo",
+    "GENERATING": "Generazione in corso...",
+    "ANALYZING": "L'AI sta analizzando i requisiti...",
+    "RESULT_TITLE": "Stima AI del Progetto",
+    "ESTIMATED_COST": "Costo Stimato",
+    "ESTIMATED_TIME": "Tempo di Sviluppo",
+    "FEATURES_IDENTIFIED": "Funzionalità identificate:",
+    "WANT_PRECISE": "Vuoi un preventivo ufficiale?",
+    "NAME_PLACEHOLDER": "Il tuo nome",
+    "EMAIL_PLACEHOLDER": "Inserisci la tua email",
+    "SEND_ME_PDF": "Ricevi i dettagli via mail",
+    "SENDING": "Invio...",
+    "SUCCESS": "Dettagli inviati! Ti contatteremo presto.",
+    "ERROR": "Errore nell'invio. Riprova più tardi."
+  },
+  "QUOTES": {
+    "TITLE": "Gestione",
+    "SUBTITLE": "Preventivi Clienti",
+    "NEW_QUOTE": "Nuovo Preventivo",
+    "CLIENT_NAME": "Nome Cliente",
+    "CLIENT_NAME_PLACEHOLDER": "Inserisci il nome del cliente",
+    "COMPANY": "Azienda",
+    "COMPANY_PLACEHOLDER": "Nome azienda (opzionale)",
+    "EMAIL": "Email Cliente",
+    "PHONE": "Telefono Cliente",
+    "ITEMS": "Voci Preventivo",
+    "ADD_ITEM": "Aggiungi Voce",
+    "ITEM_DESC": "Descrizione servizio",
+    "TOTAL": "Totale",
+    "SAVE": "Salva Preventivo",
+    "DOWNLOAD_PDF": "Scarica PDF",
+    "HISTORY": "Storico Preventivi",
+    "NO_HISTORY": "Nessun preventivo salvato.",
+    "SUCCESS_SAVE": "Preventivo salvato correttamente!",
+    "SELECT_CLIENT": "Seleziona Cliente",
+    "NEW_CLIENT": "Nuovo Cliente",
+    "ADDRESS": "Indirizzo",
+    "ADDRESS_PLACEHOLDER": "Via, Città, CAP",
+    "LOAD_QUOTE": "Carica nel form"
+  },
+  "AUTH": {
+    "LOGIN_TITLE": "Bentornato",
+    "REGISTER_TITLE": "Crea Account",
+    "LOGIN_SUBTITLE": "Accedi al tuo account",
+    "REGISTER_SUBTITLE": "Unisciti a BOCCONI SRL",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "CONFIRM_PASSWORD": "Conferma Password",
+    "FIRST_NAME": "Nome",
+    "LAST_NAME": "Cognome",
+    "FIRST_NAME_PLACEHOLDER": "Inserisci il tuo nome",
+    "LAST_NAME_PLACEHOLDER": "Inserisci il tuo cognome",
+    "LOGIN_BTN": "Accedi",
+    "REGISTER_BTN": "Registrati",
+    "LOGOUT": "Esci",
+    "GO_TO_REGISTER": "Non hai un account? Registrati",
+    "GO_TO_LOGIN": "Hai già un account? Accedi",
+    "ERROR_MATCH": "Le password non corrispondono",
+    "ERROR_REQUIRED_FIELDS": "Nome e cognome sono obbligatori",
+    "ERROR_GENERIC": "Si è verificato un errore. Riprova.",
+    "SUCCESS_REGISTER": "Account creato con successo! Ora puoi accedere."
+  }
+}

@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+
+:root {
+  /* Colori Base - Più scuri e premium per far risaltare il rosso */
+  --primary: #0f172a; /* Blu notte quasi nero */
+  --primary-light: #1e293b;
+
+  /* Il Rosso "Dolce Vita" - Dinamico e sportivo */
+  --accent: #dc2626; /* Rosso sportivo */
+  --accent-hover: #b91c1c; /* Rosso scuro per l'hover */
+
+  --bg-light: #f8fafc;
+  --bg-white: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: rgba(15, 23, 42, 0.08);
+
+  --font-main: 'Inter', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  overflow-x: hidden; // necessario per iOS Safari
+}
+
+body {
+  font-family: var(--font-main), serif;
+  background: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading), serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.main-content {
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2.2rem;
+  border-radius: 4px; // Squadrato come il sito Volta
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  &-primary {
+    background: var(--primary);
+    color: white;
+
+    &:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+    }
+  }
+
+  &-outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+
+    &:hover {
+      background: var(--primary);
+      color: white;
+    }
+  }
+
+  &-accent {
+    background: var(--accent); // Usa il rosso che abbiamo impostato nelle variabili
+    color: white;
+    border: 1px solid var(--accent);
+
+    &:hover {
+      background: var(--accent-hover); // Diventa un rosso più scuro al passaggio
+      border-color: var(--accent-hover);
+      transform: translateY(-2px); // Un leggero balzo verso l'alto
+      box-shadow: 0 5px 15px rgba(220, 38, 38, 0.4); // Un'ombra luminosa rossa
+    }
+  }
+}
+
+.text-gradient {
+  color: var(--accent);
+}
+
+.fade-in {
+  animation: fadeIn 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.status-message {
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.95rem;
+
+  &.success {
+    background: rgba(16, 185, 129, 0.08);
+    color: #059669;
+    border: 1px solid rgba(16, 185, 129, 0.2);
+  }
+
+  &.error {
+    background: rgba(239, 68, 68, 0.08);
+    color: #dc2626;
+    border: 1px solid rgba(239, 68, 68, 0.2);
+  }
+}
+
+/* =========================================
+   LIBRERIA SERVIZI DETTAGLIO (GLOBALE)
+========================================= */
+.service-detail-page {
+  background-color: var(--bg-light);
+  min-height: 100vh;
+  padding-bottom: 6rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* --- HERO BANNER --- */
+.detail-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 1;
+  }
+
+  .btn-back {
+    position: absolute;
+    top: 100px;
+    left: 2rem;
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+
+    svg { width: 20px; height: 20px; }
+
+    &:hover {
+      background: white;
+      color: var(--primary);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    padding: 0 2rem;
+    margin-top: 50px;
+
+    h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* --- INTRODUZIONE CENTRATA --- */
+.detail-intro {
+  padding: 6rem 0;
+  background: var(--bg-white);
+
+  .text-center {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 2rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+}
+
+/* --- SPLIT SECTION (Testo sx / Img dx) --- */
+.detail-split {
+  padding: 4rem 0;
+
+  .split-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .split-text {
+    h3 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+
+      .text-accent {
+        color: var(--accent);
+      }
+    }
+
+    .red-divider {
+      width: 60px;
+      height: 4px;
+      background-color: var(--accent);
+      margin-bottom: 2rem;
+      border-radius: 2px;
+    }
+
+    .description {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .cta-box {
+      margin-top: 2rem;
+    }
+  }
+
+  .split-image {
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+      object-fit: cover;
+    }
+  }
+}
+
+/* --- RESPONSIVE LIBRERIA --- */
+@media (max-width: 992px) {
+  .detail-split .split-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+
+    .split-image {
+      order: -1;
+    }
+  }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 2.5rem;
+  left: 2.5rem; /* Posizionato a sinistra per non coprire il back-to-top */
+  z-index: 9999; /* Z-index altissimo per stare sopra a tutto */
+  width: 60px;
+  height: 60px;
+  background-color: #25D366 !important; /* VERDE WHATSAPP */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  animation: pulse-green 2s infinite;
+
+
+  @keyframes pulse-green {
+    0% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+    }
+    70% {
+      transform: scale(1);
+      box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+    }
+    100% {
+      transform: scale(0.95);
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #128c7e !important; /* Verde più scuro al passaggio del mouse */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  }
+
+  svg {
+    width: 35px;
+    height: 35px;
+    /* L'icona dentro sarà bianca grazie al fill="white" nell'HTML */
+  }
+}

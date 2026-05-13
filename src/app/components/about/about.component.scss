@@ -1,0 +1,150 @@
+.about-section {
+  padding: 6rem 2rem;
+  background-color: var(--bg-light); /* Colore chiarissimo e rilassante, non più foto! */
+  color: var(--text-main);
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* --- PARTE 1: INTRO --- */
+  .intro-box {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem; /* Margine enorme sotto per staccare dalle carte */
+
+    .section-title {
+      font-size: clamp(2.5rem, 5vw, 3rem);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-family: var(--font-main);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .intro-text {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-main);
+
+      /* Mantiene in risalto i grassetti */
+      ::ng-deep strong {
+        color: var(--accent);
+        font-weight: 700;
+      }
+    }
+  }
+
+  /* --- PARTE 2: PERCHÉ SCEGLIERCI (LA GRIGLIA) --- */
+  .features-wrapper {
+    text-align: center;
+
+    .features-heading {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      color: var(--primary);
+      position: relative;
+      display: inline-block;
+
+      /* La piccola riga rossa sotto il titolo come nel vecchio sito! */
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background-color: var(--accent);
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+
+  .feature-card {
+    background: #ffffff;
+    padding: 2.5rem 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    &:hover {
+      transform: translateY(-10px); /* Si solleva al passaggio del mouse */
+      box-shadow: 0 15px 40px rgba(220, 38, 38, 0.1); /* Ombra leggermente rossa */
+      border-color: rgba(220, 38, 38, 0.2);
+    }
+
+    .icon-box {
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 1.5rem;
+      color: var(--accent); /* Icone rigorosamente rosse */
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+  }
+}
+
+/* =========================================
+   ANIMAZIONI A CASCATA (STAGGERED)
+========================================= */
+/* Setup base per gli elementi nascosti */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  /* Tolta la transition da qui, la mettiamo giù specifica */
+}
+
+/* Quando l'Observer di Angular aggiunge la classe .is-visible */
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* LA MAGIA: Ritardo a cascata SOLO per le carte */
+.feature-card {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.4s ease;
+
+  /* Questo crea un ritardo:
+     Carta 1 = 0.1s, Carta 2 = 0.3s, Carta 3 = 0.5s, Carta 4 = 0.7s */
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      transition-delay: #{$i * 0.15}s;
+    }
+  }
+}
+
+/* Togliamo il delay dall'intro, quella deve apparire subito */
+.intro-box.reveal-on-scroll,
+.features-heading.reveal-on-scroll {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}

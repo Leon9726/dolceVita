@@ -1,0 +1,52 @@
+/* =========================================
+   ANIMAZIONI ALLO SCROLL (INTERSECTION OBSERVER)
+========================================= */
+
+.reveal-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+
+  /* Punto di partenza: più basso per enfatizzare l'effetto allo scroll */
+  transform: translateY(80px);
+
+  /* Transizione fluida ma decisa */
+  transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+  transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.reveal-left {
+    transform: translateX(-100px);
+  }
+
+  &.reveal-right {
+    transform: translateX(100px);
+  }
+
+  /* Stato quando l'Observer attiva la visibilità */
+  &.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+  }
+}
+
+/* =========================================
+   LOGICA A CASCATA (IMMAGINE -> TESTO)
+========================================= */
+.grid-staggered {
+
+  /* L'immagine non ha delay: parte appena l'observer la vede */
+  .split-image.reveal-on-scroll {
+    transition-delay: 0s;
+  }
+
+  /* Il testo aspetta mezzo secondo: l'immagine sarà già quasi a posto */
+  .split-text.reveal-on-scroll {
+    transition-delay: 0.5s;
+  }
+}
+
+/* OTTIMIZZAZIONE: Evitiamo che le sezioni siano troppo vicine
+   altrimenti l'Observer le "vede" tutte insieme all'avvio */
+section {
+  margin-bottom: 4rem;
+  &:last-child { margin-bottom: 0; }
+}

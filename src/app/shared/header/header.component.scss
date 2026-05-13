@@ -1,0 +1,200 @@
+/* =========================================
+   HEADER PREMIUM (GLASSMORPHISM)
+========================================= */
+.header {
+  position: fixed;
+  top: 0; left: 0; width: 100%;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+
+  &.scrolled {
+    padding: 0.5rem 0;
+    background: rgba(255, 255, 255, 0.95);
+  }
+
+  .header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo a img {
+    height: 55px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.2rem;
+      font-weight: 700;
+      button {
+        background: none; border: none; color: var(--text-muted); cursor: pointer;
+        padding: 4px 8px; position: relative;
+        &.active { color: var(--primary); }
+      }
+    }
+
+    .book-btn {
+      padding: 0.8rem 1.8rem;
+      background: var(--accent);
+      color: white;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .mobile-toggle {
+      display: none;
+    }
+  }
+
+  /* --- DESKTOP NAV --- */
+  .nav-links {
+    ul { list-style: none; display: flex; gap: 2.5rem; align-items: center; }
+
+    // Stile dropdown desktop (già presente nel tuo codice precedente)
+    .dropdown-container {
+      position: relative;
+      &:hover .dropdown-menu {
+        opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0);
+      }
+      .dropdown-menu {
+        position: absolute; top: 100%; left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: white; min-width: 220px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-radius: 8px; opacity: 0; visibility: hidden;
+        transition: all 0.3s ease; padding: 0.5rem 0;
+        li a { color: var(--text-main); padding: 0.8rem 1.5rem; display: block; text-decoration: none; }
+      }
+    }
+  }
+
+  /* =========================================
+     RESPONSIVE MOBILE
+  ========================================= */
+  @media (max-width: 992px) {
+    padding: 0.8rem 0;
+
+    .logo img { height: 40px !important; }
+
+    .header-actions {
+      gap: 0.8rem;
+      .book-btn { display: none; }
+      .lang-switcher { display: flex !important; margin-right: 0.5rem; }
+
+      .mobile-toggle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+        width: 30px; height: 30px;
+        background: none; border: none; cursor: pointer;
+        z-index: 1100;
+
+        span {
+          display: block; width: 100%; height: 2px;
+          background-color: var(--primary);
+          transition: all 0.3s ease;
+        }
+
+        &.active {
+          span { background-color: white; }
+          span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+          span:nth-child(2) { opacity: 0; }
+          span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+        }
+      }
+    }
+
+    /* MENU LATERALE MOBILE */
+    .nav-links {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 300px; height: 100vh;
+      background: var(--primary);
+      padding: 100px 2rem;
+      transition: right 0.4s ease;
+      z-index: 1000;
+      overflow-y: auto;
+
+      &.open { right: 0; }
+
+      ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.2rem; // Spazio tra le voci principali
+
+        li {
+          width: 100%;
+
+          a {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+            display: block;
+          }
+
+          /* --- DROPDOWN MOBILE (LA TUA RICHIESTA) --- */
+          &.dropdown-container {
+            .dropdown-trigger {
+              font-weight: 700;
+              margin-bottom: 0.5rem;
+              display: flex;
+              align-items: center;
+              gap: 8px;
+              // Se vuoi una freccia: i { font-size: 0.8rem; opacity: 0.7; }
+            }
+
+            .dropdown-menu {
+              // Reset degli stili desktop
+              position: relative;
+              top: 0; left: 0;
+              transform: none;
+              opacity: 1; visibility: visible;
+              background: transparent;
+              box-shadow: none;
+              display: flex;
+              flex-direction: column;
+              gap: 0.8rem;
+
+              // Gerarchia Visiva
+              padding: 0.5rem 0 0.5rem 1.5rem; // Indentazione a destra
+              border-left: 1px solid rgba(255, 255, 255, 0.1); // Linea di guida laterale
+              margin-left: 0.2rem;
+
+              li {
+                a {
+                  color: rgba(255, 255, 255, 0.7); // Testo più leggero per i figli
+                  font-size: 1rem;
+                  font-weight: 400;
+                  text-transform: none; // Meno "aggressivo" del maiuscolo
+                  padding: 0.2rem 0;
+
+                  &:hover {
+                    color: var(--accent);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

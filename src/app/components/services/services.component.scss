@@ -1,0 +1,217 @@
+
+.services-header {
+  max-width: 900px;
+  margin: 0 auto 5rem;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.services-kicker {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.services-intro {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  /* Layout a 3 colonne esatte */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Spazio elegante tra le foto */
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  .service-card {
+    position: relative;
+    cursor: pointer;
+    width: 100%;
+    height: 320px; /* Altezza fissa per farle tutte uguali */
+    border-radius: 8px; /* Un bordo leggerissimo, molto più premium dei 20px di prima */
+    overflow: hidden;
+    isolation: isolate;
+
+    /* Stato di partenza per l'animazione allo scroll */
+    opacity: 0;
+    transform: translateY(40px);
+
+    /* --- L'Immagine --- */
+    .service-media {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+    }
+
+    /* --- Filtro Scuro --- */
+    .service-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.4); /* Filtro base leggero */
+      z-index: 1;
+      transition: background 0.4s ease;
+    }
+
+    /* --- Il Testo --- */
+    .service-content {
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+
+      h3 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #ffffff;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        margin: 0;
+        transition: transform 0.4s ease;
+        transform: translateY(20px); /* Centrato perfettamente all'inizio */
+      }
+
+      .service-details {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.4s ease;
+        margin-top: 1rem;
+
+        p {
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 0.95rem;
+          line-height: 1.5;
+          margin-bottom: 1rem;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+
+        .more-link {
+          color: var(--accent); /* Il tuo colore rosso! */
+          font-size: 0.9rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          position: relative;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+          }
+        }
+      }
+    }
+
+    /* --- L'ANIMAZIONE DI ENTRATA (Attivata da TS) --- */
+    &.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+
+      /* Effetto cascata (Staggered) */
+      @for $i from 1 through 6 {
+        &:nth-child(#{$i}) {
+          transition-delay: #{$i * 0.1}s;
+        }
+      }
+    }
+
+    /* --- L'EFFETTO HOVER --- */
+    &:hover {
+      .service-media img {
+        transform: scale(1.08); /* Zoom fluido */
+      }
+
+      .service-overlay {
+        background: rgba(15, 23, 42, 0.75); /* Diventa più scuro per far leggere il testo */
+      }
+
+      .service-content {
+        h3 {
+          transform: translateY(-10px); /* Il titolo sale */
+        }
+
+        .service-details {
+          max-height: 200px; /* Rivela il testo sottostante */
+          opacity: 1;
+
+          .more-link::after {
+            width: 100%; /* La linea rossa sottolinea il link */
+          }
+        }
+      }
+    }
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 Colonne sui Tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 Colonna sui Telefoni */
+    gap: 1rem;
+    padding: 0 1.5rem;
+
+    .service-card {
+      height: 280px;
+
+      /* Su mobile, l'hover non esiste, quindi mostriamo sempre un po' di testo */
+      .service-content {
+        h3 { transform: translateY(0); }
+        .service-details {
+          max-height: 100px;
+          opacity: 1;
+          p { -webkit-line-clamp: 2; } /* Meno righe per non affollare lo schermo */
+        }
+      }
+    }
+  }
+}
+
+

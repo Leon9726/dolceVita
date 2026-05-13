@@ -1,0 +1,41 @@
+<button
+        class="back-to-top"
+        [class.visible]="showBackToTop"
+        (click)="scrollToTop()"
+        aria-label="Torna in cima"
+></button>
+
+<section id="home" class="hero">
+    @for (img of backgroundImages; track $index) {
+        <div class="hero-bg"
+             [style.background-image]="'url(' + img + ')'"
+             [class.active]="currentImageIndex === $index">
+        </div>
+    }
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+        <div class="hero-content fade-in">
+            <h1>{{ 'HOME.HERO.TITLE' | translate }}
+            </h1>
+
+            <p class="hero-subtitle">{{ 'HOME.HERO.SUBTITLE' | translate }}</p>
+
+            <div class="cta">
+                <a [routerLink]="['/home']" fragment="autonoleggio" class="btn btn-accent">
+                    {{ 'HOME.HERO.CTA_SERVICES' | translate }}
+                </a>
+                <a [routerLink]="['/home']" fragment="contatti" class="btn btn-outline-white">
+                    {{ 'HOME.HERO.CTA_CONTACT' | translate }}
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-about></app-about>
+
+<app-services></app-services>
+
+<router-outlet></router-outlet>

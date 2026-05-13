@@ -1,0 +1,94 @@
+<section id="services" class="services fade-in">
+    <div class="services-header">
+        <span class="services-kicker">{{ 'SERVICES.KICKER' | translate }}</span>
+        <h2 class="section-title">{{ 'SERVICES.TITLE' | translate }} <span
+                class="text-gradient">{{ 'SERVICES.SUBTITLE' | translate }}</span></h2>
+        <p class="services-intro">{{ 'SERVICES.INTRO' | translate }}</p>
+    </div>
+
+    <div class="services-grid">
+        <div class="service-card" (click)="goToService('autonoleggio')">
+            <div class="service-media">
+                <img ngSrc="https://lirp.cdn-website.com/a317c335/dms3rep/multi/opt/GettyImages-1561239522-1400w.jpg" [alt]="'SERVICES.RENTAL.TITLE' | translate" fill>
+            </div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>{{ 'SERVICES.RENTAL.TITLE' | translate }}</h3>
+                <div class="service-details">
+                    <p>{{ 'SERVICES.RENTAL.DESC' | translate }}</p>
+                    <span class="more-link">{{ 'SERVICES.RENTAL.MORE' | translate }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card" [routerLink]="['/home/services/veicoli-commerciali']" fragment="services">
+            <div class="service-media">
+                <img ngSrc="https://lirp.cdn-website.com/a317c335/dms3rep/multi/opt/vito-1400w.jpg" [alt]="'SERVICES.COMMERCIAL.TITLE' | translate" fill>
+            </div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>{{ 'SERVICES.COMMERCIAL.TITLE' | translate }}</h3>
+                <div class="service-details">
+                    <p>{{ 'SERVICES.COMMERCIAL.DESC' | translate }}</p>
+                    <span class="more-link">{{ 'SERVICES.COMMERCIAL.MORE' | translate }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card" [routerLink]="['/home/services/noleggio-lungo-termine']" fragment="services">
+            <div class="service-media">
+                <img ngSrc="https://lirp.cdn-website.com/a317c335/dms3rep/multi/opt/GettyImages-1469208068-1920w.jpg" [alt]="'SERVICES.LONG_TERM.TITLE' | translate" fill>
+            </div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>{{ 'SERVICES.LONG_TERM.TITLE' | translate }}</h3>
+                <div class="service-details">
+                    <p>{{ 'SERVICES.LONG_TERM.DESC' | translate }}</p>
+                    <span class="more-link">{{ 'SERVICES.LONG_TERM.MORE' | translate }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card" [routerLink]="['/home/services/parco-auto']" fragment="services">
+            <div class="service-media">
+                <img ngSrc="https://lirp.cdn-website.com/a317c335/dms3rep/multi/opt/GettyImages-1473399515-1920w.jpg" [alt]="'SERVICES.FLEET.TITLE' | translate" fill>
+            </div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>{{ 'SERVICES.FLEET.TITLE' | translate }}</h3>
+                <div class="service-details">
+                    <p>{{ 'SERVICES.FLEET.DESC' | translate }}</p>
+                    <span class="more-link">{{ 'SERVICES.FLEET.MORE' | translate }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card" [routerLink]="['/home/services/vendita-auto-usate']" fragment="services">
+            <div class="service-media">
+                <img ngSrc="https://lirp.cdn-website.com/a317c335/dms3rep/multi/opt/GettyImages-1438308925-1920w.jpg" [alt]="'SERVICES.USED_CARS.TITLE' | translate" fill>
+            </div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>{{ 'SERVICES.USED_CARS.TITLE' | translate }}</h3>
+                <div class="service-details">
+                    <p>{{ 'SERVICES.USED_CARS.DESC' | translate }}</p>
+                    <span class="more-link">{{ 'SERVICES.USED_CARS.MORE' | translate }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-card" [routerLink]="['/home/services/lavaggio-auto']" fragment="services">
+            <div class="service-media">
+                <img ngSrc="https://lirp.cdn-website.com/a317c335/dms3rep/multi/opt/GettyImages-1497712759-1920w.jpg" [alt]="'SERVICES.WASH.TITLE' | translate" fill>
+            </div>
+            <div class="service-overlay"></div>
+            <div class="service-content">
+                <h3>{{ 'SERVICES.WASH.TITLE' | translate }}</h3>
+                <div class="service-details">
+                    <p>{{ 'SERVICES.WASH.DESC' | translate }}</p>
+                    <span class="more-link">{{ 'SERVICES.WASH.MORE' | translate }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
