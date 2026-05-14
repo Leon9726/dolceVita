@@ -1,17 +1,14 @@
 import { Component } from '@angular/core';
-import {TranslateModule} from "@ngx-translate/core";
-import {NgOptimizedImage} from "@angular/common";
+import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.scss'],
-    imports: [
-        TranslateModule,
-        NgOptimizedImage
-    ],
-  standalone: true
+    selector: 'app-footer',
+    templateUrl: './footer.component.html',
+    styleUrls: ['./footer.component.scss'],
+    imports: [RouterLink, TranslateModule],
+    standalone: true
 })
 export class FooterComponent {
-
+    currentYear: number = new Date().getFullYear();
 }

@@ -13,6 +13,7 @@ import {ParcoAutoComponent} from "./components/service-detail/parco-auto/parco-a
 import {AutoUsateComponent} from "./components/service-detail/auto-usate/auto-usate.component";
 import {AutolavaggioComponent} from "./components/service-detail/autolavaggio/autolavaggio.component";
 import {AutonoleggioComponent} from "./components/service-detail/autonoleggio/autonoleggio.component";
+import {InformativaPrivacyComponent} from "./components/informativa-privacy/informativa-privacy.component";
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -35,6 +36,7 @@ export const routes: Routes = [
             {path: 'autolavaggio', component: AutolavaggioComponent}
         ]
     },
+    {path: 'informativa-privacy', component: InformativaPrivacyComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'login', component: LoginComponent},
     {path: 'annunci', component: AnnouncementsComponent},

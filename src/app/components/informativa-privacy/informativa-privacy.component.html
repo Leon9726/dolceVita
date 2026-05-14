@@ -1,0 +1,181 @@
+<div class="service-detail-page fade-in legal-page">
+
+    <section class="detail-hero" [style.background-image]="'url(' + heroImage + ')'">
+        <div class="hero-overlay"></div>
+        <button class="btn-back" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+            {{ 'PRIVACY_POLICY.BACK_BUTTON' | translate }}
+        </button>
+        <div class="hero-content reveal-on-scroll">
+            <h1>{{ 'PRIVACY_POLICY.HERO_TITLE' | translate }}</h1>
+        </div>
+    </section>
+
+    <section class="legal-content">
+        <div class="container reveal-on-scroll">
+
+            <p class="intro-text" [innerHTML]="'PRIVACY_POLICY.INTRO_TEXT' | translate"></p>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC1_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC1_DESC' | translate }}</p>
+                <div class="table-responsive">
+                    <table class="legal-table">
+                        <thead>
+                        <tr>
+                            <th>{{ 'PRIVACY_POLICY.SEC1_TH1' | translate }}</th>
+                            <th>{{ 'PRIVACY_POLICY.SEC1_TH2' | translate }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC1_TD1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC1_TD2' | translate }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC2_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC2_DESC' | translate }}</p>
+                <div class="table-responsive">
+                    <table class="legal-table">
+                        <thead>
+                        <tr>
+                            <th>{{ 'PRIVACY_POLICY.SEC2_TH1' | translate }}</th>
+                            <th>{{ 'PRIVACY_POLICY.SEC2_TH2' | translate }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td [innerHTML]="'PRIVACY_POLICY.SEC2_TD1_1' | translate"></td>
+                            <td>{{ 'PRIVACY_POLICY.SEC2_TD1_2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td [innerHTML]="'PRIVACY_POLICY.SEC2_TD2_1' | translate"></td>
+                            <td>{{ 'PRIVACY_POLICY.SEC2_TD2_2' | translate }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3">{{ 'PRIVACY_POLICY.SEC2_POST' | translate }}</p>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC3_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC3_DESC' | translate }}</p>
+                <div class="table-responsive">
+                    <table class="legal-table">
+                        <thead>
+                        <tr>
+                            <th>{{ 'PRIVACY_POLICY.SEC3_TH1' | translate }}</th>
+                            <th>{{ 'PRIVACY_POLICY.SEC3_TH2' | translate }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R1_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R1_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R2_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R2_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R3_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R3_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R4_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R4_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R5_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R5_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R6_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R6_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R7_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R7_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R8_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC3_R8_C2' | translate }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3">{{ 'PRIVACY_POLICY.SEC3_POST' | translate }}</p>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC4_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC4_DESC' | translate }}</p>
+                <div class="table-responsive">
+                    <table class="legal-table">
+                        <thead>
+                        <tr>
+                            <th>{{ 'PRIVACY_POLICY.SEC4_TH1' | translate }}</th>
+                            <th>{{ 'PRIVACY_POLICY.SEC4_TH2' | translate }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ 'PRIVACY_POLICY.SEC4_R1_C1' | translate }}</td>
+                            <td>{{ 'PRIVACY_POLICY.SEC4_R1_C2' | translate }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3">{{ 'PRIVACY_POLICY.SEC4_POST' | translate }}</p>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC5_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC5_DESC' | translate }}</p>
+                <div class="table-responsive">
+                    <table class="legal-table">
+                        <thead>
+                        <tr>
+                            <th>{{ 'PRIVACY_POLICY.SEC5_TH1' | translate }}</th>
+                            <th>{{ 'PRIVACY_POLICY.SEC5_TH2' | translate }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td [innerHTML]="'PRIVACY_POLICY.SEC5_R1_C1' | translate"></td>
+                            <td>{{ 'PRIVACY_POLICY.SEC5_R1_C2' | translate }}</td>
+                        </tr>
+                        <tr>
+                            <td [innerHTML]="'PRIVACY_POLICY.SEC5_R2_C1' | translate"></td>
+                            <td>{{ 'PRIVACY_POLICY.SEC5_R2_C2' | translate }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="mt-3">{{ 'PRIVACY_POLICY.SEC5_POST' | translate }}</p>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC6_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC6_TEXT' | translate }}</p>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC7_TITLE' | translate }}</h3>
+                <p [innerHTML]="'PRIVACY_POLICY.SEC7_TEXT' | translate"></p>
+            </div>
+
+            <div class="legal-section">
+                <h3>{{ 'PRIVACY_POLICY.SEC8_TITLE' | translate }}</h3>
+                <p>{{ 'PRIVACY_POLICY.SEC8_TEXT' | translate }}</p>
+            </div>
+
+        </div>
+    </section>
+</div>

@@ -1,21 +1,119 @@
-<footer class="footer">
-    <div class="footer-content">
-        <div class="footer-main">
-            <p>&copy; 2026 <span class="text-gradient">BOCCONI SRL</span> - P. IVA 03109990735. {{ 'FOOTER.RIGHTS' | translate }}
-            </p>
-            <div class="footer-links">
-                <a href="tel:+3909994685069">099 94685069</a>
-                <a href="mailto:amministrazionebocconissl@gmail.com">amministrazionebocconissl&#64;gmail.com</a>
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-top">
+
+            <div class="footer-col about-col">
+                <h3 class="footer-title">La Dolce Vita</h3>
+                <div class="red-line"></div>
+                <p [innerHTML]="'FOOTER.ABOUT_TEXT' | translate"></p>
+                <div class="social-links mt-4">
+                    <a href="https://www.facebook.com/NoleggioAutoMottola/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/noleggioauto_dolcevita/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:ladolcevitarent@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3 class="footer-title">{{ 'FOOTER.QUICK_LINKS' | translate }}</h3>
+                <div class="red-line"></div>
+                <ul>
+                    <li><a routerLink="/"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+                    <li><a routerLink="/servizi"><i class="fa-solid fa-chevron-right"></i> Autonoleggio</a></li>
+                    <li><a routerLink="/veicoli-commerciali"><i class="fa-solid fa-chevron-right"></i> Veicoli Commerciali</a></li>
+                    <li><a routerLink="/noleggio-a-lungo-termine"><i class="fa-solid fa-chevron-right"></i> Lungo Termine</a></li>
+                    <li><a routerLink="/parco-auto"><i class="fa-solid fa-chevron-right"></i> Parco Auto</a></li>
+                    <li><a routerLink="/contatti"><i class="fa-solid fa-chevron-right"></i> Contatti</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3 class="footer-title">{{ 'FOOTER.CONTACTS_TITLE' | translate }}</h3>
+                <div class="red-line"></div>
+
+                <div class="contact-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>SEDE DI MOTTOLA (TA)</strong><br>
+                        Via Salvador Allende, 3 - Zona artigianale
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+393428315325">+39 342 831 5325</a>
+                </div>
+
+                <div class="contact-item mt-3">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <strong>SEDE DI MASSAFRA (TA)</strong><br>
+                        Strada Statale Appia 26
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+393938622366">+39 393 862 2366</a>
+                </div>
+
+                <div class="contact-item mt-3">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <div>
+                        <strong>COMMERCIALE / ALTRE SEDI</strong><br>
+                        Sede di Grottaglie<br>
+                        Tel: <a href="tel:+393896829038">+39 389 682 9038</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-col hours-col">
+                <h3 class="footer-title">{{ 'FOOTER.HOURS_TITLE' | translate }}</h3>
+                <div class="red-line"></div>
+                <ul class="hours-list">
+                    <li>
+                        <span>Lun - Ven</span>
+                        <span>08:30 - 13:00<br>15:30 - 19:00</span>
+                    </li>
+                    <li>
+                        <span>Sabato</span>
+                        <span>08:30 - 13:00</span>
+                    </li>
+                    <li>
+                        <span>Domenica</span>
+                        <span class="text-accent">Chiuso</span>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container flex-bottom">
+            <div class="copyright">
+                &copy; {{ currentYear }} La Dolce Vita S.r.l. - P.IVA 02933790731
+            </div>
+            <div class="legal-links">
+                <a routerLink="/informativa-privacy">Privacy Policy</a>
+                <span class="separator">|</span>
+                <a routerLink="/cookie-policy">Cookie Policy</a>
+                <span class="separator">|</span>
+                <a href="#">Informazioni Legali</a>
             </div>
         </div>
 
-        <div class="footer-credits">
-            <span class="credits-label">Realizzato da</span>
-
-            <a href="https://hitechnology.netlify.app" target="_blank" class="credits-badge">
-                <img ngSrc="assets/images/logo-trasp.png" alt="HI-TECH logo" class="credits-img" height="1080"
-                     width="1920">
-                <!--<span class="hitech-text">HI-TECH</span-->
+        <div class="container credits-bar">
+            <span>Designed by</span>
+            <a href="https://hitechnology.netlify.app/" target="_blank" aria-label="HI-TECH">
+                <img src="assets/images/logo-hitech.png" alt="HI-TECH" class="logo-agency">
+            </a>
+            <span class="separator">|</span>
+            <span>Questa azienda è presente anche su</span>
+            <a href="https://www.paginegialle.it/" target="_blank" aria-label="Pagine Gialle">
+                <img src="https://iol-website.italiaonline.it/site-resources/footer_pg.png" alt="Pagine Gialle" class="logo-pg">
+            </a>
+            <span>e</span>
+            <a href="https://www.paginebianche.it/" target="_blank" aria-label="Pagine Bianche">
+                <img src="https://iol-website.italiaonline.it/site-resources/footer_pb.png" alt="Pagine Bianche" class="logo-pb">
             </a>
         </div>
     </div>
