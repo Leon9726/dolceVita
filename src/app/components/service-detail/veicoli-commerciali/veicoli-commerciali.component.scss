@@ -1,0 +1,193 @@
+/* =========================================
+   ANIMAZIONI ALLO SCROLL E IMPOSTAZIONI BASE
+========================================= */
+.reveal-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(80px);
+  transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1),
+  transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.reveal-left { transform: translateX(-100px); }
+  &.reveal-right { transform: translateX(100px); }
+
+  &.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+  }
+}
+
+.grid-staggered {
+  .split-image.reveal-on-scroll,
+  .card-image.reveal-on-scroll {
+    transition-delay: 0s;
+  }
+  .split-text.reveal-on-scroll,
+  .card-text.reveal-on-scroll {
+    transition-delay: 0.4s;
+  }
+}
+
+section {
+  margin-bottom: 0; /* Azzerato per far combaciare le fasce colorate */
+  padding: 5rem 0; /* Padding interno generoso */
+}
+
+/* =========================================
+   1. SEZIONE HERO
+========================================= */
+.detail-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  padding: 0;
+
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.8));
+    z-index: 1;
+  }
+
+  .btn-back {
+    position: absolute; top: 120px; left: 2rem; z-index: 10;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);
+    color: white; padding: 0.5rem 1.2rem; border-radius: 50px;
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    backdrop-filter: blur(4px); transition: all 0.3s ease;
+
+    svg { width: 20px; height: 20px; }
+    &:hover { background: var(--accent); border-color: var(--accent); }
+  }
+
+  .hero-content {
+    position: relative; z-index: 2; text-align: center; color: white; padding: 0 2rem;
+
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
+    p { font-size: 1.2rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; }
+  }
+}
+
+/* =========================================
+   2. SEZIONE INTRO
+========================================= */
+.detail-intro {
+  background-color: var(--bg-light);
+  h2 { font-size: 2.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1.5rem; text-transform: uppercase; }
+  p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; max-width: 900px; margin: 0 auto; }
+}
+
+/* =========================================
+   3. SEZIONE PARALLASSE PREMIUM (VANTAGGI)
+========================================= */
+.premium-parallax-section {
+  position: relative;
+  padding: 6rem 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Effetto parallasse */
+  display: flex;
+  align-items: center;
+
+  .parallax-overlay {
+    position: absolute; inset: 0;
+    background: rgba(15, 23, 42, 0.65); /* Filtro scuro per far leggere il testo */
+    z-index: 1;
+  }
+
+  .z-10 { position: relative; z-index: 10; }
+
+  .floating-cards-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4); /* Ombra gigante sotto la "vetrina" */
+
+    /* Box Sinistro: L'Infografica Rossa */
+    .card-image {
+      flex: 1;
+      max-width: 450px;
+      background: #c31e23; /* Il tuo colore rosso */
+      border-radius: 12px 0 0 12px;
+      overflow: hidden;
+
+      img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    }
+
+    /* Box Destro: Il Testo (Glassmorphism) */
+    .card-text {
+      flex: 1;
+      background: rgba(15, 23, 42, 0.85); /* Effetto vetro scuro satinato */
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0 12px 12px 0;
+      padding: 4rem 3rem;
+      display: flex; flex-direction: column; justify-content: center;
+
+      h3 { color: white; font-size: 2rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; line-height: 1.2; }
+      .red-divider { width: 50px; height: 4px; background: var(--accent); margin-bottom: 1.5rem; }
+      p { color: rgba(255, 255, 255, 0.8); font-size: 1.05rem; line-height: 1.8; }
+    }
+  }
+}
+
+/* =========================================
+   4. SEZIONE RITIRO IMMEDIATO (Griglia standard)
+========================================= */
+.split-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+
+  .split-text {
+    h3 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; color: var(--text-main); }
+    .red-divider { width: 60px; height: 4px; background: var(--accent); margin-bottom: 1.5rem; }
+    .description { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; }
+  }
+
+  .split-image img { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+}
+
+/* =========================================
+   RESPONSIVE MOBILE
+========================================= */
+@media (max-width: 992px) {
+  /* Fix per la griglia standard (Ritiro in sede) */
+  .split-grid { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+  .split-grid .red-divider { margin: 0 auto 1.5rem; }
+
+  /* Fix per la sezione premium parallasse (Vantaggi) */
+  .premium-parallax-section {
+    padding: 3rem 1rem;
+    background-attachment: scroll; /* Disattiva parallasse per performance su mobile */
+
+    .floating-cards-wrapper {
+      flex-direction: column;
+      box-shadow: none;
+      gap: 1rem;
+
+      .card-image {
+        max-width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      }
+
+      .card-text {
+        border-radius: 12px;
+        padding: 2.5rem 1.5rem;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        text-align: center;
+
+        .red-divider { margin: 0 auto 1.5rem; }
+      }
+    }
+  }
+}

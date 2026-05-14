@@ -1,0 +1,81 @@
+<div class="service-detail-page fade-in">
+
+    <section class="detail-hero" [style.background-image]="'url(' + heroImage + ')'">
+        <div class="hero-overlay"></div>
+
+        <button class="btn-back" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+            Torna ai Servizi
+        </button>
+
+        <div class="hero-content reveal-on-scroll">
+            <h1>{{ 'SERVICE_DETAIL.auto_usate.HERO_TITLE' | translate }}</h1>
+            <p>{{ 'SERVICE_DETAIL.auto_usate.HERO_SUBTITLE' | translate }}</p>
+        </div>
+    </section>
+
+    <section class="detail-intro">
+        <div class="container text-center reveal-on-scroll">
+            <h2>{{ 'SERVICE_DETAIL.auto_usate.INTRO_TITLE' | translate }}</h2>
+            <div class="red-divider mx-auto"></div>
+            <p [innerHTML]="'SERVICE_DETAIL.auto_usate.INTRO_TEXT' | translate"></p>
+        </div>
+    </section>
+
+    <section class="premium-parallax-section" [style.background-image]="'url(' + parallaxBg + ')'">
+        <div class="parallax-overlay"></div>
+
+        <div class="container relative z-10">
+            <div class="floating-cards-wrapper grid-staggered">
+
+                <div class="card-image reveal-on-scroll reveal-left">
+                    <img [src]="infoImage" alt="Auto Usate Selezionate">
+                </div>
+
+                <div class="card-text reveal-on-scroll reveal-right">
+                    <h3>{{ 'SERVICE_DETAIL.auto_usate.ADVANTAGES_TITLE' | translate }}</h3>
+                    <div class="red-divider"></div>
+                    <p [innerHTML]="'SERVICE_DETAIL.auto_usate.ADVANTAGES_TEXT' | translate"></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-split bg-white">
+        <div class="container">
+            <div class="split-grid grid-staggered align-items-start">
+
+                <div class="split-text reveal-on-scroll reveal-left">
+                    <h3>
+                        <span class="text-accent">{{ 'SERVICE_DETAIL.auto_usate.CONSULTATION_TITLE_RED' | translate }}</span>
+                        <br>
+                        {{ 'SERVICE_DETAIL.auto_usate.CONSULTATION_TITLE_BLACK' | translate }}
+                    </h3>
+                    <div class="red-divider"></div>
+                    <p class="description" [innerHTML]="'SERVICE_DETAIL.auto_usate.CONSULTATION_TEXT' | translate"></p>
+                    <div class="cta-box mt-4">
+                        <a routerLink="/contatti" class="btn btn-accent"><i class="fa fa-phone mr-2"></i> Chiama per un preventivo</a>
+                    </div>
+                </div>
+
+                <div class="split-image reveal-on-scroll reveal-right">
+                    <div class="premium-social-card shadow-lg">
+                        <div class="social-icon-wrapper">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <h4>Scopri le occasioni in Tempo Reale</h4>
+                        <p>Pubblichiamo i nuovi arrivi e le offerte speciali direttamente sulla nostra pagina. Unisciti alla nostra community!</p>
+
+                        <a href="https://www.facebook.com/share/14f975YcdLX/?mibextid=wwXIfr" target="_blank" class="btn-social">
+                            <i class="fa-brands fa-facebook"></i>
+                            Seguici su Facebook
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>

@@ -1,0 +1,54 @@
+<div class="service-detail-page fade-in">
+
+    <section class="detail-hero" [style.background-image]="'url(' + heroImage + ')'">
+        <div class="hero-overlay"></div>
+
+        <button class="btn-back" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+            Torna ai Servizi
+        </button>
+
+        <div class="hero-content reveal-on-scroll">
+            <h1>{{ 'SERVICE_DETAIL.parco_auto.HERO_TITLE' | translate }}</h1>
+            <p>{{ 'SERVICE_DETAIL.parco_auto.HERO_SUBTITLE' | translate }}</p>
+        </div>
+    </section>
+
+    <section class="detail-intro bg-light">
+        <div class="container text-center reveal-on-scroll">
+            <h2>{{ 'SERVICE_DETAIL.parco_auto.INTRO_TITLE' | translate }}</h2>
+            <div class="red-divider mx-auto"></div>
+            <p [innerHTML]="'SERVICE_DETAIL.parco_auto.INTRO_TEXT' | translate"></p>
+        </div>
+    </section>
+
+    <section class="fleet-section">
+        <div class="container">
+
+            <div *ngFor="let segment of fleetData; let i = index" class="fleet-segment">
+
+                <div class="segment-header reveal-on-scroll">
+                    <h3>{{ segment.title }}</h3>
+                    <div class="line"></div>
+                </div>
+
+                <div class="fleet-grid">
+                    <div *ngFor="let car of segment.cars" class="car-card reveal-on-scroll">
+                        <div class="car-image-wrapper">
+                            <img [src]="car.imageUrl" [alt]="car.name">
+                            <div class="car-overlay">
+                                <a routerLink="/prenota" class="btn btn-accent btn-sm">Preventivo</a>
+                            </div>
+                        </div>
+                        <div class="car-info">
+                            <h4>{{ car.name }}</h4>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>

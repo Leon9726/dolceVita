@@ -1,32 +1,28 @@
-import {Component, HostListener, inject} from '@angular/core';
-import {RouterLink} from "@angular/router";
-import {NgOptimizedImage} from "@angular/common";
-import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import { Component, HostListener, inject } from '@angular/core';
+import { TranslateService, TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-header',
+  standalone: true,
+  imports: [TranslateModule, RouterLink, NgOptimizedImage],
   templateUrl: './header.component.html',
-  imports: [
-    RouterLink,
-    TranslateModule,
-    NgOptimizedImage
-  ],
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  isMenuOpen = false;
-  isScrolled = false;
-
   private translate = inject(TranslateService);
+
+  isScrolled = false;
+  isMenuOpen = false;
+  isServicesOpenMobile = false; // Per l'accordion mobile
 
   get currentLang(): string {
     return this.translate.currentLang || 'it';
   }
 
-  // Questa funzione "ascolta" lo scroll del browser
-  @HostListener('window:scroll', [])
+  @HostListener('window:scroll')
   onWindowScroll() {
-    // Se lo scroll supera i 50px, isScrolled diventa true
     this.isScrolled = window.scrollY > 50;
   }
 
@@ -36,11 +32,17 @@ export class HeaderComponent {
 
   closeMenu() {
     this.isMenuOpen = false;
-  }
-  changeLang(lang: string) {
-    this.translate.use(lang);
-    // Opzionale: chiudi il menu mobile se l'utente cambia lingua da lì
-    this.isMenuOpen = false;
+    this.isServicesOpenMobile = false;
   }
 
+  toggleServicesMobile(event: Event) {
+    if (window.innerWidth <= 992) {
+      event.preventDefault();
+      this.isServicesOpenMobile = !this.isServicesOpenMobile;
+    }
+  }
+
+  changeLang(lang: string) {
+    this.translate.use(lang);
+  }
 }

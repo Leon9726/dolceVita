@@ -14,13 +14,13 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDPfqGgPC359Rle_cHsUuWxexwEyeQ_9mU",
-  authDomain: "bocconi-srl.firebaseapp.com",
-  projectId: "bocconi-srl",
-  storageBucket: "bocconi-srl.firebasestorage.app",
-  messagingSenderId: "936979045607",
-  appId: "1:936979045607:web:5580a5b680e8ff1e319642",
-  measurementId: "G-XK2Y3R71NZ"
+  apiKey: "AIzaSyBTQWOHZwhhMOc2WATnzKM_a_bHS1cu08I",
+  authDomain: "dolcevita-2a909.firebaseapp.com",
+  projectId: "dolcevita-2a909",
+  storageBucket: "dolcevita-2a909.firebasestorage.app",
+  messagingSenderId: "712144549486",
+  appId: "1:712144549486:web:882e5cc8394490cabe987f",
+  measurementId: "G-WGTXTVCWN1"
 };
 
 export const appConfig: ApplicationConfig = {
@@ -37,7 +37,6 @@ export const appConfig: ApplicationConfig = {
     provideFirebaseApp(() => initializeApp(firebaseConfig)),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
-    provideFunctions(() => getFunctions()), // <-- Aggiungi il provider per le Functions
     importProvidersFrom(
       TranslateModule.forRoot({
         loader: {

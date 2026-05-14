@@ -1,0 +1,110 @@
+/* =========================================
+   ANIMAZIONI ALLO SCROLL
+========================================= */
+.reveal-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(80px);
+  transition: opacity 1.2s cubic-bezier(0.215, 0.61, 0.355, 1), transform 1.2s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  &.reveal-left { transform: translateX(-100px); }
+  &.reveal-right { transform: translateX(100px); }
+
+  &.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) !important;
+  }
+}
+
+.grid-staggered {
+  .split-image.reveal-on-scroll, .card-image.reveal-on-scroll { transition-delay: 0s; }
+  .split-text.reveal-on-scroll, .card-text.reveal-on-scroll { transition-delay: 0.4s; }
+}
+
+section { margin-bottom: 0; padding: 5rem 0; }
+.align-items-start { align-items: start !important; }
+
+/* --- HERO --- */
+.detail-hero {
+  position: relative; height: 50vh; min-height: 400px;
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center; padding: 0;
+  .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(15,23,42,0.4), rgba(15,23,42,0.8)); z-index: 1; }
+  .btn-back {
+    position: absolute; top: 120px; left: 2rem; z-index: 10;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);
+    color: white; padding: 0.5rem 1.2rem; border-radius: 50px;
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    backdrop-filter: blur(4px); transition: all 0.3s ease;
+    svg { width: 20px; height: 20px; }
+    &:hover { background: var(--accent); border-color: var(--accent); }
+  }
+  .hero-content { position: relative; z-index: 2; text-align: center; color: white; padding: 0 2rem;
+    h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; }
+    p { font-size: 1.2rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; }
+  }
+}
+
+/* --- INTRO --- */
+.detail-intro {
+  background-color: var(--bg-light);
+  h2 { font-size: 2.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 1rem; text-transform: uppercase; }
+  .red-divider { width: 60px; height: 4px; background: var(--accent); margin-bottom: 1.5rem; }
+  p { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; max-width: 900px; margin: 0 auto; }
+}
+
+/* --- VETRINA SOSPESA (GLASSMORPHISM) --- */
+.premium-parallax-section {
+  position: relative; padding: 6rem 0;
+  background-size: cover; background-position: center; background-attachment: fixed;
+  display: flex; align-items: center;
+  .parallax-overlay { position: absolute; inset: 0; background: rgba(15, 23, 42, 0.65); z-index: 1; }
+  .z-10 { position: relative; z-index: 10; }
+  .floating-cards-wrapper {
+    display: flex; justify-content: center; align-items: stretch; gap: 0;
+    max-width: 1000px; margin: 0 auto; border-radius: 12px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    .card-image { flex: 1; max-width: 450px; background: #c31e23; border-radius: 12px 0 0 12px; overflow: hidden;
+      img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    }
+    .card-text {
+      flex: 1; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 0 12px 12px 0;
+      padding: 4rem 3rem; display: flex; flex-direction: column; justify-content: center;
+      h3 { color: white; font-size: 2rem; font-weight: 700; margin-bottom: 1.2rem; text-transform: uppercase; }
+      .red-divider { width: 50px; height: 4px; background: var(--accent); margin-bottom: 1.5rem; }
+      p { color: rgba(255, 255, 255, 0.8); font-size: 1.05rem; line-height: 1.8; }
+    }
+  }
+}
+
+/* --- SOCIAL CARD PREMIUM --- */
+.split-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  .split-text {
+    h3 { font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem; text-transform: uppercase; color: var(--text-main); }
+    .red-divider { width: 60px; height: 4px; background: var(--accent); margin-bottom: 1.5rem; }
+    .description { font-size: 1.1rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 2rem; }
+  }
+  .premium-social-card {
+    background: linear-gradient(145deg, #1e293b, #0f172a); border-radius: 16px; padding: 3rem 2rem; text-align: center; color: white;
+    position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);
+    &::before { content: ''; position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(24, 119, 242, 0.2); border-radius: 50%; filter: blur(40px); }
+    .social-icon-wrapper { position: relative; width: 60px; height: 60px; margin: 0 auto 1.5rem; background: #1877F2; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 20px rgba(24, 119, 242, 0.4); i { font-size: 1.8rem; } }
+    h4 { position: relative; font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; }
+    p { position: relative; color: rgba(255, 255, 255, 0.7); font-size: 1.05rem; margin-bottom: 2.5rem; }
+    .btn-social { position: relative; display: inline-flex; align-items: center; gap: 10px; background: white; color: #1877F2; padding: 0.8rem 1.8rem; border-radius: 50px; font-weight: 700; text-decoration: none; transition: 0.3s;
+      &:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,255,255,0.2); }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .split-grid { grid-template-columns: 1fr; gap: 3rem; text-align: center; .red-divider { margin: 0 auto 1.5rem; } }
+  .premium-parallax-section { padding: 3rem 1rem; background-attachment: scroll;
+    .floating-cards-wrapper { flex-direction: column; box-shadow: none; gap: 1rem;
+      .card-image { max-width: 100%; border-radius: 12px; }
+      .card-text { border-radius: 12px; padding: 2.5rem 1.5rem; text-align: center; .red-divider { margin: 0 auto 1.5rem; } }
+    }
+  }
+}

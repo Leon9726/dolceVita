@@ -5,7 +5,14 @@ import {ServicesComponent} from './components/services/services.component';
 import {ContactComponent} from './components/contact/contact.component';
 import {LoginComponent} from "./components/login/login.component";
 import {AnnouncementsComponent} from "./components/announcements/announcements.component";
-import {AutonoleggioComponent} from "./components/service-detail/autonoleggio.component";
+import {
+    VeicoliCommercialiComponent
+} from "./components/service-detail/veicoli-commerciali/veicoli-commerciali.component";
+import {LungoTermineComponent} from "./components/service-detail/lungo-termine/lungo-termine.component";
+import {ParcoAutoComponent} from "./components/service-detail/parco-auto/parco-auto.component";
+import {AutoUsateComponent} from "./components/service-detail/auto-usate/auto-usate.component";
+import {AutolavaggioComponent} from "./components/service-detail/autolavaggio/autolavaggio.component";
+import {AutonoleggioComponent} from "./components/service-detail/autonoleggio/autonoleggio.component";
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -17,10 +24,15 @@ export const routes: Routes = [
         path: 'services',
         children: [
             // Se l'utente va su /services esatto, vede la lista dei servizi
-            { path: '', component: ServicesComponent, pathMatch: 'full' },
+            {path: '', component: ServicesComponent, pathMatch: 'full'},
 
             // Se va su /services/autonoleggio, vede il dettaglio!
-            { path: 'autonoleggio', component: AutonoleggioComponent }
+            {path: 'autonoleggio', component: AutonoleggioComponent},
+            {path: 'veicoli-commerciali', component: VeicoliCommercialiComponent},
+            {path: 'lungo-termine', component: LungoTermineComponent},
+            {path: 'parco-auto', component: ParcoAutoComponent},
+            {path: 'auto-usate', component: AutoUsateComponent},
+            {path: 'autolavaggio', component: AutolavaggioComponent}
         ]
     },
     {path: 'contact', component: ContactComponent},

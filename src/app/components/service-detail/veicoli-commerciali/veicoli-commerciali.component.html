@@ -1,0 +1,70 @@
+<div class="service-detail-page fade-in">
+
+    <section class="detail-hero" [style.background-image]="'url(' + heroImage + ')'">
+        <div class="hero-overlay"></div>
+
+        <button class="btn-back" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+            Torna ai Servizi
+        </button>
+
+        <div class="hero-content reveal-on-scroll">
+            <h1>{{ 'SERVICE_DETAIL.veicoli_commerciali.HERO_TITLE' | translate }}</h1>
+            <p>{{ 'SERVICE_DETAIL.veicoli_commerciali.HERO_SUBTITLE' | translate }}</p>
+        </div>
+    </section>
+
+    <section class="detail-intro">
+        <div class="container text-center reveal-on-scroll">
+            <h2>{{ 'SERVICE_DETAIL.veicoli_commerciali.INTRO_TITLE' | translate }}</h2>
+            <p [innerHTML]="'SERVICE_DETAIL.veicoli_commerciali.INTRO_TEXT' | translate"></p>
+        </div>
+    </section>
+
+    <section class="premium-parallax-section" [style.background-image]="'url(' + parallaxBg + ')'">
+        <div class="parallax-overlay"></div>
+
+        <div class="container relative z-10">
+            <div class="floating-cards-wrapper grid-staggered">
+
+                <div class="card-image reveal-on-scroll reveal-left">
+                    <img [src]="infoImage" alt="Dettagli Furgoni e Logistica">
+                </div>
+
+                <div class="card-text reveal-on-scroll reveal-right">
+                    <h3>
+                        {{ 'SERVICE_DETAIL.veicoli_commerciali.ADVANTAGES_TITLE' | translate }}
+                    </h3>
+                    <div class="red-divider"></div>
+                    <p [innerHTML]="'SERVICE_DETAIL.veicoli_commerciali.ADVANTAGES_TEXT' | translate"></p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="detail-split bg-white">
+        <div class="container">
+            <div class="split-grid grid-staggered">
+
+                <div class="split-text reveal-on-scroll reveal-left">
+                    <h3>
+                        <span class="text-accent">{{ 'SERVICE_DETAIL.veicoli_commerciali.PICKUP_TITLE_RED' | translate }}</span>
+                        {{ 'SERVICE_DETAIL.veicoli_commerciali.PICKUP_TITLE_BLACK' | translate }}
+                    </h3>
+                    <div class="red-divider"></div>
+                    <p class="description" [innerHTML]="'SERVICE_DETAIL.veicoli_commerciali.PICKUP_TEXT' | translate"></p>
+                    <div class="cta-box mt-4">
+                        <a routerLink="/contatti" class="btn btn-accent">Richiedi Preventivo Aziendale</a>
+                    </div>
+                </div>
+
+                <div class="split-image reveal-on-scroll reveal-right">
+                    <img [src]="vanImage" alt="Furgone a Noleggio">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>

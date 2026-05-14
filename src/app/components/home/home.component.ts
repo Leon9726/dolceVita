@@ -25,7 +25,7 @@ export class HomeComponent implements OnInit, AfterViewInit, OnDestroy {
 
     // --- NUOVE VARIABILI PER LO SLIDER (CON IMMAGINI UNSPLASH) ---
     backgroundImages: string[] = [
-        '/assets/images/fotoFamiglia.avif', // Auto su strada al tramonto
+        '/assets/images/fotoFamiglia.jpg', // Auto su strada al tramonto
         'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?q=80&w=2071&auto=format&fit=crop', // Furgone/Van in viaggio
         'https://images.unsplash.com/photo-1529369623266-f5264b696110?q=80&w=1974&auto=format&fit=crop'  // Famiglia sorridente in auto
     ];
