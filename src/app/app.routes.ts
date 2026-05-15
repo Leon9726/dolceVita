@@ -14,6 +14,7 @@ import {AutoUsateComponent} from "./components/service-detail/auto-usate/auto-us
 import {AutolavaggioComponent} from "./components/service-detail/autolavaggio/autolavaggio.component";
 import {AutonoleggioComponent} from "./components/service-detail/autonoleggio/autonoleggio.component";
 import {InformativaPrivacyComponent} from "./components/informativa-privacy/informativa-privacy.component";
+import {InformazioniLegaliComponent} from "./components/informazioni-legali/informazioni-legali.component";
 
 export const routes: Routes = [
     {path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -37,6 +38,7 @@ export const routes: Routes = [
         ]
     },
     {path: 'informativa-privacy', component: InformativaPrivacyComponent},
+    {path: 'informazioni-legali', component: InformazioniLegaliComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'login', component: LoginComponent},
     {path: 'annunci', component: AnnouncementsComponent},

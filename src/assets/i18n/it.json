@@ -55,23 +55,20 @@
       "MORE": "Prenota lavaggio"
     }
   },
-  "CONTACT": {
-    "TITLE": "Contatta",
-    "SUBTITLE": "BOCCONI SRL",
-    "INFO": "Informazioni",
-    "INFO_DESC": "Siamo a disposizione per assistenza, preventivi e informazioni sui nostri servizi.",
-    "NAME": "Nome e Cognome",
-    "NAME_PLACEHOLDER": "Il tuo nome e cognome",
-    "EMAIL": "Email",
-    "EMAIL_PLACEHOLDER": "La tua email",
-    "PHONE": "Cellulare",
-    "PHONE_PLACEHOLDER": "Inserisci il tuo numero di cellulare",
-    "MESSAGE": "Messaggio",
-    "MESSAGE_PLACEHOLDER": "Scrivi qui la tua richiesta",
-    "SEND": "Invia Messaggio",
-    "SENDING": "Invio in corso...",
-    "SUCCESS": "Messaggio inviato con successo!",
-    "ERROR": "Errore durante l'invio. Riprova più tardi."
+  "CONTACTS": {
+    "HERO_TITLE": "Contatti",
+    "HERO_SUBTITLE": "Siamo qui per aiutarti a trovare l'auto perfetta",
+    "FORM_TITLE": "Compila il Form",
+    "INTRO_TEXT": "La Dolce Vita è un'agenzia di autonoleggio di Mottola, in provincia di Taranto, che mette a disposizione della clientela un ampio parco mezzi per qualsiasi esigenza.<br><br>Che si tratti di trasporto persone o merci, di singoli o gruppi, la società tarantina propone soluzioni personalizzate garantendo massima flessibilità e tariffe sempre convenienti.",
+    "LBL_NAME": "Nome e Cognome",
+    "LBL_EMAIL": "Indirizzo E-mail",
+    "LBL_PHONE": "Telefono",
+    "LBL_MESSAGE": "Messaggio",
+    "BTN_SEND": "Invia Richiesta",
+    "MSG_SUCCESS": "Grazie! La tua richiesta è stata inviata con successo. Ti ricontatteremo al più presto.",
+    "MSG_ERROR": "Si è verificato un errore durante l'invio. Riprova più tardi o contattaci telefonicamente.",
+    "INFO_TITLE": "Sedi e Recapiti",
+    "HOURS_TITLE": "Orari di Apertura"
   },
   "HOME": {
     "HERO": {
@@ -162,6 +159,11 @@
     "CONTACTS_TITLE": "Sedi e Recapiti",
     "HOURS_TITLE": "Orari di Apertura",
     "ABOUT_TEXT": "La Dolce Vita è una società di autonoleggio che mette a disposizione dei propri clienti un vasto parco macchine, completo di mezzi adatti a qualsiasi esigenza, suddivisi per categoria e fasce di costo diverse. Dalle utilitarie ai SUV, dai minivan ai furgoni, qualunque siano le necessità di trasporto, l'autonoleggio La Dolce Vita propone soluzioni su misura sotto ogni punto di vista."
+  },
+  "LEGAL_INFO": {
+    "HERO_TITLE": "Informazioni Legali",
+    "BACK_BUTTON": "Torna Indietro",
+    "DISCLAIMER_TEXT": "I testi, le informazioni e gli altri dati pubblicati in questo sito nonché i link ad altri siti presenti sul web hanno esclusivamente scopo informativo e non assumono alcun carattere di ufficialità.<br><br>La Dolce Vita S.r.l. non assume alcuna responsabilità per eventuali errori od omissioni di qualsiasi tipo e per qualunque tipo di danno diretto, indiretto o accidentale derivante dalla lettura o dall'impiego delle informazioni pubblicate, o di qualsiasi forma di contenuto presente nel sito o per l'accesso o l'uso del materiale contenuto in altri siti."
   },
   "SERVICE_DETAIL": {
     "autonoleggio": {

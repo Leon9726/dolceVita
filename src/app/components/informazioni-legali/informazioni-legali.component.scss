@@ -1,0 +1,54 @@
+/* =========================================
+   ANIMAZIONI E IMPOSTAZIONI BASE
+========================================= */
+.reveal-on-scroll {
+  opacity: 0;
+  will-change: transform, opacity;
+  transform: translateY(40px);
+  transition: opacity 0.8s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+  &.is-visible { opacity: 1; transform: translate(0, 0) !important; }
+}
+
+/* =========================================
+   HERO
+========================================= */
+.detail-hero {
+  position: relative; height: 35vh; min-height: 250px;
+  background-size: cover; background-position: center;
+  display: flex; align-items: center; justify-content: center; padding: 0;
+  .hero-overlay { position: absolute; inset: 0; background: rgba(15,23,42,0.7); z-index: 1; }
+  .btn-back {
+    position: absolute; top: 120px; left: 2rem; z-index: 10;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.3);
+    color: white; padding: 0.5rem 1.2rem; border-radius: 50px;
+    display: flex; align-items: center; gap: 8px; cursor: pointer;
+    backdrop-filter: blur(4px); transition: all 0.3s ease;
+    svg { width: 20px; height: 20px; }
+    &:hover { background: var(--accent); border-color: var(--accent); }
+  }
+  .hero-content { position: relative; z-index: 2; text-align: center; color: white; padding: 0 2rem;
+    h1 { font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; margin-bottom: 0; letter-spacing: 0.05em; }
+  }
+}
+
+/* =========================================
+   CONTENUTO LEGALE
+========================================= */
+.legal-page { background-color: #f8fafc; min-height: 100vh; display: flex; flex-direction: column; }
+.legal-content {
+  padding: 5rem 0; color: var(--text-main); flex-grow: 1;
+  .container { max-width: 800px; background: white; padding: 4rem 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
+
+  .disclaimer-text {
+    font-size: 1.15rem; line-height: 1.9; color: var(--text-muted); margin: 0; text-align: justify;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .legal-content {
+    padding: 2rem 1rem;
+    .container { padding: 2rem 1.5rem; }
+    .disclaimer-text { text-align: left; font-size: 1.05rem; }
+  }
+}

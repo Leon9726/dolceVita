@@ -1,0 +1,22 @@
+<div class="service-detail-page fade-in legal-page">
+
+    <section class="detail-hero" [style.background-image]="'url(' + heroImage + ')'">
+        <div class="hero-overlay"></div>
+        <button class="btn-back" (click)="goBack()">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg>
+            {{ 'LEGAL_INFO.BACK_BUTTON' | translate }}
+        </button>
+        <div class="hero-content reveal-on-scroll">
+            <h1>{{ 'LEGAL_INFO.HERO_TITLE' | translate }}</h1>
+        </div>
+    </section>
+
+    <section class="legal-content">
+        <div class="container reveal-on-scroll">
+            <div class="legal-section text-center">
+                <p class="disclaimer-text" [innerHTML]="'LEGAL_INFO.DISCLAIMER_TEXT' | translate"></p>
+            </div>
+        </div>
+    </section>
+
+</div>
